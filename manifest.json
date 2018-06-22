@@ -2,12 +2,23 @@
   "manifest_version": 2,
   "name": "LitFit",
   "version": "0.1",
+  "permissions": [
+          "webNavigation",
+          "storage",
+          "*://*.aylien.com/*"
+  ],
 
 
   "content_scripts": [
     {
       "matches": [
-        "<all_urls>"
+        "https://*.nytimes.com/*/*/*/*/*",
+        "https://*.cnn.com/*/*/*/*/*",
+        "https://*.wired.com/story/*",
+        "https://*.wired.com/review/*",
+        "https://*.theatlantic.com/*/archive/*/*/*/*",
+        "https://*.newyorker.com/*/*/*"
+
       ],
       "css": ["styles.css"],
       "js": ["jquery-2.1.1.js","content.js"]
@@ -15,8 +26,7 @@
   ],
 
   "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
+    "default_icon": "icon.png"
   },
 
   "background": {
