@@ -74,3 +74,16 @@ chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
         }
   }
 });
+
+$.ajax({
+  url:"api_keys.json",
+  type:"GET",
+  success: function (response) {
+    console.log(response.AYLIEN_APPLICATION_KEY);
+    
+  },
+  error: function(error) {
+    console.log("ERROR!");
+  }
+
+});

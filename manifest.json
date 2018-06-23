@@ -5,10 +5,13 @@
   "permissions": [
           "webNavigation",
           "storage",
-          "*://*.aylien.com/*"
+          "*://*.aylien.com/*",
+          "background"
   ],
 
-
+  "background": {
+      "page": "background.html"
+   },
   "content_scripts": [
     {
       "matches": [
@@ -27,9 +30,7 @@
 
   "browser_action": {
     "default_icon": "icon.png"
-  },
-
-  "background": {
-    "scripts": ["background.js"]
   }
+
+
 }
